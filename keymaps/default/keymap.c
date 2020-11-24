@@ -40,10 +40,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
     [_FN] = LAYOUT(
         _______,    _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,  _______,  _______, _______ \
-        KC_SLEP,    _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,  _______,  UK_F11,  UK_F12  \
-        _______,    XXXXXXX,   KC_WAKE,   KC_MYCM,   XXXXXXX,   XXXXXXX,   KC_AGAIN,  KC_VOLU,   KC_INS,    KC_PWR,   KC_PSCR,  XXXXXXX, UK_PGUP \
-        _______,    XXXXXXX,   KC_SAVE,   XXXXXXX,   KC_FIND,   XXXXXXX,   KC_HELP,   KC_VOLD,   KC_CALC,   KC_BRIU,  XXXXXXX,  UK_UP,   UK_PGDN \
-        _______,    UK_UNDO,   KC_CUT,    KC_COPY,   KC_PASTE,  RESET,     XXXXXXX,   KC_MAIL,   UK_COMM,   KC_BRID,  UK_LEFT,  UK_DWON, KC_RIGHT \
+        KC_SLEP,    _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,  _______,  KC_F11,  KC_F12  \
+        _______,    XXXXXXX,   KC_WAKE,   KC_MYCM,   XXXXXXX,   XXXXXXX,   KC_AGAIN,  KC_VOLU,   KC_INS,    KC_PWR,   KC_PSCR,  XXXXXXX, KC_PGUP \
+        _______,    XXXXXXX,   KC_SAVE,   XXXXXXX,   KC_FIND,   XXXXXXX,   KC_HELP,   KC_VOLD,   KC_CALC,   KC_BRIU,  XXXXXXX,  KC_UP,   KC_PGDN \
+        _______,    UK_UNDO,   KC_CUT,    KC_COPY,   KC_PASTE,  RESET,     XXXXXXX,   KC_MAIL,   UK_COMM,   KC_BRID,  KC_LEFT,  KC_DWON, KC_RIGHT \
         _______,    _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,  _______,  _______, _______  \
     )
 };
