@@ -1,7 +1,5 @@
 # POS78
 
-WORK IN PROGRESS
-
 * Keyboard Maintainer: [smssmssms](https://github.com/smssmssms)
 * Hardware Supported: ATMEGA 32U4 (Adafruit Itsy Bitsy 5v) 
 * Hardware Availability: 1980-90's Partner Tech Corp KB-78 78 key Point-Of-Sale ortholinear keyboard conversion
