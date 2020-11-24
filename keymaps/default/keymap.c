@@ -24,45 +24,47 @@ enum layer_names {
 
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes {
-    QMKBEST = SAFE_RANGE,
-    QMKURL
+    KC_BASE = SAFE_RANGE,
+    KC_FN,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [_BASE] = LAYOUT(
-
-        KC_ESC,    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9    KC_F10,   KC_BSPC, KC_DEL \
-        UK_GRV,    UK_1,     UK_2,     UK_3,     UK_4,     UK_5,     UK_6,     UK_7,     UK_8,     UK_9     UK_0,     UK_MINS, UK_EQL \
-        KC_TAB,    KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,    KC_P,     UK_LBRC, UK_RBRC \
-        KC_CAPS,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,    UK_SCLN,  UK_QUOT, UK_HASH \
-        KC_LSFT,   UK_BSLS,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     UK_COMM, UK_DOT,   UK_SLSH, KC_RSFT \
-        KC_LCTL,   KC_LGUI,  KC_LALT,  _______,  KC_SPC,   KC_??,    KC_??,    KC_ENT,   _______,  KC_F9,   KC_F10,   KC_HOME, KC_END  \
-        
-            KC_TAB,   KC_SPC
+        KC_ESC,     KC_F1,     KC_F2,     KC_F3,     KC_F4,     KC_F5,     KC_F6,     KC_F7,     KC_F8,     KC_F9,    KC_F10,   KC_BSPC, KC_DEL \
+        UK_GRV,     UK_1,      UK_2,      UK_3,      UK_4,      UK_5,      UK_6,      UK_7,      UK_8,      UK_9,     UK_0,     UK_MINS, UK_EQL \
+        KC_TAB,     KC_Q,      KC_W,      KC_E,      KC_R,      KC_T,      KC_Y,      KC_U,      KC_I,      KC_O,     KC_P,     UK_LBRC, UK_RBRC \
+        KC_CAPS,    KC_A,      KC_S,      KC_D,      KC_F,      KC_G,      KC_H,      KC_J,      KC_K,      KC_L,     UK_SCLN,  UK_QUOT, UK_HASH \
+        KC_LSFT,    UK_BSLS,   KC_Z,      KC_X,      KC_C,      KC_V,      KC_B,      KC_N,      KC_M,      UK_COMM,  UK_DOT,   UK_SLSH, KC_RSFT \
+        KC_LCTL,    KC_LGUI,   KC_LALT,   XXXXXXX,   KC_SPC,    TO_FN,     KC_??,     KC_ENT,    XXXXXXX,   KC_F9,    KC_F10,   KC_HOME, KC_END  \
     ),
+    
     [_FN] = LAYOUT(
-        QMKBEST, QMKURL,  _______,
-            RESET,    XXXXXXX
+        _______,    _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,  _______,  _______, _______ \
+        UK_GRV,     _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,  _______,  UK_MINS, UK_EQL \
+        _______,    KC_Q,      KC_W,      KC_E,      KC_R,      KC_T,      KC_Y,      KC_U,      KC_I,      KC_O,     KC_P,     UK_LBRC, UK_RBRC \
+        _______,    KC_A,      KC_S,      KC_D,      KC_F,      KC_G,      KC_H,      KC_J,      KC_K,      KC_L,     UK_SCLN,  UK_QUOT, UK_HASH \
+        _______,    UK_BSLS,   KC_Z,      KC_X,      KC_C,      KC_V,      KC_B,      KC_N,      KC_M,      UK_COMM,  UK_DOT,   UK_SLSH, KC_RSFT \
+        _______,    _______,   _______,   _______,   _______,   TO_BASE,     KC_??,   _______,   _______,   KC_F9,    KC_F10,   _______, _______  \
     )
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case QMKBEST:
+        case BASE:
             if (record->event.pressed) {
-                // when keycode QMKBEST is pressed
+                // when keycode BASE is pressed
                 SEND_STRING("QMK is the best thing ever!");
             } else {
-                // when keycode QMKBEST is released
+                // when keycode BASE is released
             }
             break;
-        case QMKURL:
+        case FN:
             if (record->event.pressed) {
-                // when keycode QMKURL is pressed
+                // when keycode FN is pressed
                 SEND_STRING("https://qmk.fm/\n");
             } else {
-                // when keycode QMKURL is released
+                // when keycode FN is released
             }
             break;
     }
