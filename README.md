@@ -1,4 +1,4 @@
-# POS78
+# pos78
 
 ![KB-78](https://raw.githubusercontent.com/smssmssms/POS78/main/KB-78.png)
 
