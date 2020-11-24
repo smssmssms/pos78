@@ -9,6 +9,8 @@ WORK IN PROGRESS
 * Hardware Availability: 1980-90's Partner Tech Corp KB-78 78 key Point-Of-Sale ortholinear keyboard conversion
   https://www.partner.com.tw/wp-content/uploads/2019/09/KB-78-G-78-1-190911.pdf
 
+![KB-78](https://raw.githubusercontent.com/smssmssms/POS78/main/KB-78.png)
+
 Make example for this keyboard (after setting up your build environment):
 
     make POS78:default
