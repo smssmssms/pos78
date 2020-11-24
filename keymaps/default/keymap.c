@@ -24,8 +24,7 @@ enum layer_names {
 
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes {
-    KC_BASE = SAFE_RANGE,
-    KC_FN,
+    //none
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -48,25 +47,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,    _______,   _______,   _______,   _______,   TO_BASE,     KC_??,   _______,   _______,   KC_F9,    KC_F10,   _______, _______  \
     )
 };
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case BASE:
-            if (record->event.pressed) {
-                // when keycode BASE is pressed
-                SEND_STRING("QMK is the best thing ever!");
-            } else {
-                // when keycode BASE is released
-            }
-            break;
-        case FN:
-            if (record->event.pressed) {
-                // when keycode FN is pressed
-                SEND_STRING("https://qmk.fm/\n");
-            } else {
-                // when keycode FN is released
-            }
-            break;
-    }
-    return true;
-}
