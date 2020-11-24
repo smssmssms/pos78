@@ -44,6 +44,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,    XXXXXXX,   KC_WAKE,   KC_MYCM,   XXXXXXX,   XXXXXXX,   KC_AGAIN,  KC_VOLU,   KC_INS,    KC_PWR,   KC_PSCR,  XXXXXXX, UK_PGUP \
         _______,    XXXXXXX,   KC_SAVE,   XXXXXXX,   KC_FIND,   XXXXXXX,   KC_HELP,   KC_VOLD,   KC_CALC,   KC_BRIU,  XXXXXXX,  UK_UP,   UK_PGDN \
         _______,    UK_UNDO,   KC_CUT,    KC_COPY,   KC_PASTE,  RESET,     XXXXXXX,   KC_MAIL,   UK_COMM,   KC_BRID,  UK_LEFT,  UK_DWON, KC_RIGHT \
-        _______,    _______,   _______,   _______,   _______,   TO_BASE,   _______,   _______,   _______,   _______,  _______,  _______, _______  \
+        _______,    _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,   _______,  _______,  _______, _______  \
     )
 };
