@@ -1,1 +1,1 @@
-# The default keymap for POS78
+# The default (UK) keymap for POS78
